@@ -86,7 +86,7 @@ class LinkedList
     void display()
     {
       Node<T>* temp = head;
-      while(temp != nullptr) {
+      while (temp != nullptr) {
         std::cout << temp->data << " ";
         temp = temp->next;
       }
