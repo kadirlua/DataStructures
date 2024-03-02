@@ -47,7 +47,7 @@ class LinkedList
     bool search(T val)
     {
       Node<T>* temp = head;
-      while(temp != nullptr) {
+      while (temp != nullptr) {
         if (temp->data == val) {
           return true;
         }
@@ -57,7 +57,7 @@ class LinkedList
     }
 
     
-    void remove(int val)
+    void remove(T val)
     {
       Node<T>* temp = head;
       // If the head is to be deleted
