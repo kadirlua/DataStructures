@@ -14,3 +14,5 @@ add_executable(SinglyLinkedList ${PROJECT_SOURCE_DIR}/SinglyLinkedList.cpp)
 if(MSVC)
     add_compile_options("/Zc:__cplusplus")
 endif()
+
+add_test(NAME Test1 COMMAND $<TARGET_FILE:SinglyLinkedList>)
