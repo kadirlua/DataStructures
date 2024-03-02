@@ -32,7 +32,7 @@ class LinkedList
     void insert(T&& val)
     {
       // make a new node
-      Node<T>* newNode = new Node<T>(std::forward<T>(val));
+      auto* newNode = new Node<T>(std::forward<T>(val));
       // If list is empty, make the new node, the head
       if (head == nullptr) {
         head = newNode;
@@ -46,7 +46,7 @@ class LinkedList
     // loop over the list. return true if element found
     bool search(T val)
     {
-      Node<T>* temp = head;
+      auto* temp = head;
       while (temp != nullptr) {
         if (temp->data == val) {
           return true;
@@ -59,14 +59,14 @@ class LinkedList
     
     void remove(T val)
     {
-      Node<T>* temp = head;
+      auto* temp = head;
       // If the head is to be deleted
       if (temp != nullptr && temp->data == val) {
         head = temp->next;
         delete temp;
       } else {
         // Else loop over the list and search for the node to delete
-        Node<T>* curr = head;
+        auto* curr = head;
         while (temp != nullptr && temp->data != val) {
           // When node is found, delete the node and modify the pointers
           curr = temp;
@@ -85,7 +85,7 @@ class LinkedList
 
     void display()
     {
-      Node<T>* temp = head;
+      auto* temp = head;
       while (temp != nullptr) {
         std::cout << temp->data << " ";
         temp = temp->next;
